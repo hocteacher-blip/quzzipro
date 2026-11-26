@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZZI ARENA PRO — Đấu Trường Tri Thức Trực Tuyến</title>
+    <meta name="description" content="Nền tảng tổ chức trò chơi, thi đấu và kiểm tra kiến thức trực tuyến thời gian thực dành cho giáo viên và học sinh." />
+    <meta property="og:title" content="QUIZZI ARENA PRO — Đấu Trường Tri Thức Trực Tuyến" />
+    <meta property="og:description" content="Nền tảng tổ chức trò chơi, thi đấu và kiểm tra kiến thức trực tuyến thời gian thực dành cho giáo viên và học sinh." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function () {
+        try {
+          var currentFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          if (currentFetch) {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function () {
+                return currentFetch;
+              },
+              set: function (fn) {
+                if (typeof fn === 'function') {
+                  currentFetch = fn;
+                }
+              },
+            });
+          }
+        } catch (_e) {}
+
+        window.addEventListener(
+          'error',
+          function (event) {
+            if (
+              (event && event.filename && event.filename.indexOf('chrome-extension://') === 0) ||
+              (event &&
+                event.message &&
+                event.message.indexOf('Cannot set property fetch of #<Window>') !== -1)
+            ) {
+              event.stopImmediatePropagation();
+              event.preventDefault();
+            }
+          },
+          true
+        );
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

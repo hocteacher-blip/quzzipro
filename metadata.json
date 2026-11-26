@@ -1,0 +1,6 @@
+{
+  "name": "QUIZZI ARENA PRO",
+  "description": "Nền tảng tổ chức trò chơi, thi đấu và kiểm tra kiến thức trực tuyến thời gian thực dành cho giáo viên và học sinh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
